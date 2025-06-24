@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fibonacci Generator</title>
+</head>
+<body>
+  <script>
+    const n = parseInt(prompt("Enter a number to generate Fibonacci series:"));
+
+    function generateFibonacci(num) {
+      let fib = [];
+      let a = 0, b = 1;
+      if (num >= 1) fib.push(a);
+      if (num >= 2) fib.push(b);
+
+      for (let i = 2; i < num; i++) {
+        let sum = a + b;
+        fib.push(sum); 
+        a = b;
+        b = sum;
+      }
+      return fib;
+    }
+
+    function displayFibonacci() {
+      if (isNaN(n) || n <= 0) {
+        alert("Please enter a valid number");
+        return;
+      }
+
+      const fibSeries = generateFibonacci(n);
+      const display = document.createElement("div");
+      display.style.fontSize = "10px";
+      display.style.margin = "10px";
+      display.style.display = "flex";
+      display.style.flexDirection = "column";
+      display.style.alignItems = "flex-start";
+      display.style.gap = "10px";
+
+      fibSeries.forEach((num, index) => {
+        const span = document.createElement("span");
+        span.textContent = num;
+        span.style.color = "#ffffff";
+        span.style.padding = "10px 15px";
+        span.style.borderRadius = "20px";
+        span.style.border = "2px solid " + (index % 2 === 0 ? "blue" : "green");
+        span.style.backgroundColor = index % 2 === 0 ? "blue" : "green";
+        span.style.display = "inline-block";
+        display.appendChild(span);
+      });
+
+      document.body.appendChild(display);
+    }
+
+    displayFibonacci();
+  </script>
+</body>
+</html>
