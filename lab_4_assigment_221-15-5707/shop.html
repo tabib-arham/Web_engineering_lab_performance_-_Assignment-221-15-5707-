@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop With Me</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Shop With Me</div>
+
+    <div class="dropdown">
+      <a href="#">Items</a>
+      <div class="dropdown-content">
+        <a href="#">Food</a>
+        <a href="#">Drinks</a>
+        <a href="#">Snacks</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#">Offers</a>
+      <div class="dropdown-content">
+        <a href="#">Discounts</a>
+        <a href="#">Coupons</a>
+        <a href="#">Free Delivery</a>
+      </div>
+    </div>
+
+    <a href="#">Account</a>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Type your item" onkeyup="searchProducts()" />
+    </div>
+
+    <div class="cart">🛒<sub id="cartCount">0</sub></div>
+  </nav>
+
+  <div class="banner">
+    <img src="offer.jpg" alt="Offer Banner" />
+    <button class="special-btn" onclick="showOfferPopup()">Special Offer</button>
+  </div>
+
+  <main class="product-grid" id="productGrid">
+    <!-- Product cards will be inserted here -->
+  </main>
+
+  <!-- Offer Popup -->
+  <div class="modal" id="offerModal" style="display:none;">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeOfferPopup()">&times;</span>
+      <h2>🔥 Limited Time Special Offer!</h2>
+      <p>Get 30% off on all snacks today!</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Thank you for watching</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
