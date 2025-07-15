@@ -1,0 +1,98 @@
+.body{
+    background-color: white;
+    font-family: Arial, sans-serif;
+    color: black;
+}
+.top{
+    background-color: #fda603;
+    padding: 20px;
+    text-align: center;
+}
+.top h1{
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+}
+.top h1:hover{
+    color: #4CAF50;
+}
+.banner{
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-around;
+}
+.dp img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+.dp img :hover{
+    transform: scale(1.1);
+    transition: transform 0.3s;
+    
+}
+.shortbio button{
+    width:30%;
+    padding: 10px;
+    background-color: #fda603;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.shortbio button:hover{
+    background-color: #531515;
+}
+.section2{
+    display: flex;
+    justify-content: space-around;
+}
+.div2{
+    width: 50%;
+    padding: 20px;
+    background-color: rgb(136, 101, 76)
+}
+.div2 button{
+    width: 100%;
+    padding: 10px;
+    background-color: #711ddf;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.div2 button:hover{
+    background-color: #45a049;
+}
+.div3{
+    width: 50%;
+    padding: 20px;
+    background-color: lightblue;
+    text-decoration: none;
+}
+.div3 p:hover{
+    color: #4CAF50;
+}
+div3 p:onclick{
+    color: #021602;
+}
+.div3 img{
+    height: 350px;
+    width: 600px;
+    
+}
+.div3 button{
+    width: 100%;
+    padding: 10px;
+    background-color: #711ddf;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.feedbackform{
+    width: 100%;
+    padding: 20px;
+    background-color: yellowgreen;
+    display: flex;
+    justify-content: center;
+}

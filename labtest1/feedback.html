@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="text-align: center; color: aqua;">feedback</h1>
+    <div class="feedbackform">
+        <form action="feedback.html" method="post">
+            <label for="name">name</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name" required>
+            <p id="namemessage"></p>
+            <br><br>
+            <label for="email">Email</label>
+            <input type="email" name="email"  id="mail"placeholder="Enter your email" required>
+            <p></p>
+            <br><br>
+            
+            <textarea name="feedback" rows="5" cols="30" placeholder="Enter your feedback" required></textarea>
+            <br><br>
+            <input type="submit" value="Submit Feedback" id="submit">
+            
+        </form>
+    </div>
+    <script>
+        
+        const name= getElementById('name');
+        const email= getElementById('mail');
+        
+        document.getElementById('name').addEventListener('input', function() {
+          
+            if(name.value.length > 3) {
+                getElementById('namemessage').innerText = 'more than 3 characters';
+            }
+        });
+        document.getElementById('mail').addEventListener('input', function() {
+            if(email.value.includes('@')) {
+                getElementById('mailmessage').innerText = 'valid email';
+            } else {
+                getElementById('mailmessage').innerText = 'invalid email';
+            }
+        });
+
+    </script>
+</body>
+</html>

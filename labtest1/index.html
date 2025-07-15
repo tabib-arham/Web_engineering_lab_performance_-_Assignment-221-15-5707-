@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top">
+        <h1>Md Arham Tabib</h1>
+    </div>
+    <p id="showgreeting"></p>
+    <div class="banner">
+    <div class="shortbio">
+        <h2>Short bio</h2>
+        <p>this is Md Arham Tabib
+        i am from Faridpur</p>
+        passionate for coding</p>
+        <p>Education: currently styding at Daffiodil International university</p>
+        <p>Skills: HTML, CSS, JavaScript</p>
+        <button type="button" ><a href="https://github.com/tabib-arham"style="text-decoration: none; font: size 10px;">Github</a></button>
+    </div>
+    <div class="dp">
+        <img src="Dp.jpg" alt="">
+    </div>
+    </div>
+    <div class="section2">
+    <div class="div2">
+        <h3><i>Hobbies</i></h3>
+        <hr>
+        <ul>
+            <li><i>Coding</i></li>
+            <li><i>Gaming</i></li>
+            <li><i>Traveling</i></li>
+            <li><i>Reading</i></li>
+
+        </ul>
+ 
+        <h3><i>Skills</i></h3>
+        <hr>
+        <ol type="A">
+            <li><i>HTML</i></li>
+            <li><i>CSS</i></li>
+            <li><i>JavaScript</i></li>
+            <li><i>React</i></li>
+        </ol>
+        <button type="button" id="showmessage"> Surprise me</button>
+    </div>
+    <div class="div3">
+        <p><a href="" style="text-decoration: none;">All is well when the end is Well</a></p>
+        <img src="gant.png" alt="">
+        <br>
+        <button id="feedback"><a href="feedback.html" style="text-decoration: none;">feedback Form</a></button>
+
+    </div>
+</div>
+    <script>
+        document.getElementById('showmessage').addEventListener('click', function() {
+            alert('Keep up the great work!');
+        });
+
+        const greeting = document.createElement('p');
+        greeting.textContent = 'Hello, welcome to my page!';
+        greeting.style.color = 'blue';
+        document.getElementById('showgreeting').appendChild(greeting);
+        document.getElementById('feedback').addEventListener('click', function() {
+            alert('Thank you for your interest in providing feedback!');
+        });
+    </script>
+
+</body>
+</html>
